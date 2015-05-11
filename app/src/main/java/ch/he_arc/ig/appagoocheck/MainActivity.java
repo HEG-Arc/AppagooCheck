@@ -1,22 +1,23 @@
 package ch.he_arc.ig.appagoocheck;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.view.View;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.AdapterView;
+import android.view.MenuItem;;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.ListView;
-
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 
 public class MainActivity extends ActionBarActivity {
     ListView lv;
+    String[] appPackages;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +29,12 @@ public class MainActivity extends ActionBarActivity {
 
         final int max = apps.size();
         String[] appNames = new String[max];
+        appPackages = new String[max];
         Drawable[] appImages = new Drawable[max];
 
         for (int i=0; i<max; i++) {
             appNames[i] = apps.get(i).getName();
+            appPackages[i] = apps.get(i).getPackageName();
             appImages[i] = apps.get(i).getIcon();
         }
 
@@ -42,14 +45,33 @@ public class MainActivity extends ActionBarActivity {
 
         Button button = (Button)findViewById(R.id.button);
 
+        final String strApps = Arrays.toString(appPackages);
+
         button.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        Toast.makeText(getApplicationContext(), "Tiens!!", Toast.LENGTH_SHORT).show();
+                        String[] params = {getAccountManager(), strApps.replaceAll("\\s","")};
+                        new HTTPRequestTask().execute(params);
+                        Toast.makeText(getApplicationContext(), "Installed application submitted!", Toast.LENGTH_SHORT).show();
                     }
                 }
         );
+    }
 
+    private String getAccountManager() {
+        AccountManager manager = (AccountManager) getSystemService(ACCOUNT_SERVICE);
+        Account[] accounts = manager.getAccounts();
+        String gmail = null;
+
+        for(Account account: accounts)
+        {
+            if(account.type.equalsIgnoreCase("com.google"))
+            {
+                gmail = account.name;
+                break;
+            }
+        }
+        return gmail;
     }
 
     @Override
