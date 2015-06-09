@@ -2,20 +2,6 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\alessio.desanto\AndroidStudioProjects\AppagooCheck\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="C:\Users\alessio.desanto\AndroidStudioProjects\AppagooCheck\app\build\intermediates\pre-dexed\debug\classes-32bfafda65f16a928782f5015680e3d549f6c4c8.jar" />
-    </item>
-    <item
-        jar="C:\Users\alessio.desanto\AndroidStudioProjects\AppagooCheck\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="C:\Users\alessio.desanto\AndroidStudioProjects\AppagooCheck\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-424a1abe92bd2b06e667ca26e931ab963b928e71.jar" />
-    </item>
-    <item
         jar="C:\Users\alessio.desanto\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -28,6 +14,20 @@
         revision="21.1.2"
         sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
         <dex dex="C:\Users\alessio.desanto\AndroidStudioProjects\AppagooCheck\app\build\intermediates\pre-dexed\debug\classes-958ec619da91d92f15cd701e845bc4e6e94f2108.jar" />
+    </item>
+    <item
+        jar="C:\Users\alessio.desanto\AndroidStudioProjects\AppagooCheck\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="C:\Users\alessio.desanto\AndroidStudioProjects\AppagooCheck\app\build\intermediates\pre-dexed\debug\classes-32bfafda65f16a928782f5015680e3d549f6c4c8.jar" />
+    </item>
+    <item
+        jar="C:\Users\alessio.desanto\AndroidStudioProjects\AppagooCheck\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\alessio.desanto\AndroidStudioProjects\AppagooCheck\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-424a1abe92bd2b06e667ca26e931ab963b928e71.jar" />
     </item>
 
 </items>

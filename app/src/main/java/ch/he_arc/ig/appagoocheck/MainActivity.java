@@ -7,7 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.ListView;
@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
         ListView list;
 
         ArrayList<AppInfo> apps = AppInfo.getListOfInstalledApp(getApplicationContext());
-
+        
         final int max = apps.size();
         String[] appNames = new String[max];
         appPackages = new String[max];
@@ -52,7 +52,7 @@ public class MainActivity extends ActionBarActivity {
                     public void onClick(View v) {
                         String[] params = {getAccountManager(), strApps.replaceAll("\\s","")};
                         new HTTPRequestTask().execute(params);
-                        Toast.makeText(getApplicationContext(), "Installed application submitted!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Installed applications submitted!", Toast.LENGTH_SHORT).show();
                     }
                 }
         );
