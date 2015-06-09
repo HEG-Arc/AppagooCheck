@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
         ListView list;
 
         ArrayList<AppInfo> apps = AppInfo.getListOfInstalledApp(getApplicationContext());
-        
+
         final int max = apps.size();
         String[] appNames = new String[max];
         appPackages = new String[max];
